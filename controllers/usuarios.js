@@ -67,12 +67,6 @@ const usuariosPatch = (req, res = response) => {
 const usuariosDelete = async(req, res = response) => {
    
     const {id} = req.params;
-
-    //Fisicamente lo borramos
-        //const usuario = await Usuario.findByIdAndDelete(id);
-
-    //No lo borramos fisicamente para mantener la relacion con otras tablas
-
     const usuario = await Usuario.findByIdAndUpdate(id, {estado:false});
 
     res.json(usuario);
