@@ -10,4 +10,4 @@ const validarCampos = (req, res, next) =>{
 }
 
 
-module.exports ={validarCampos}
+module.exports = { validarCampos }
